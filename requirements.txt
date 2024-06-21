@@ -1,4 +1,4 @@
-Flask==2.0.1
+Flask==3.0.3
 Werkzeug==3.0.3
 flask-cors==3.0.10
 google_trans_new==1.1.9

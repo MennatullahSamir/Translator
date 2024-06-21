@@ -6,9 +6,7 @@ import base64
 from flask_cors import CORS
 
 
-
 translator = google_translator()
-
 
 #text to text translation
 def translate(text ,output_lang):
