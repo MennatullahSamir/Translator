@@ -12,7 +12,7 @@ translator = Translator()
 def translate(text, output_lang):
     try:
         translated_text = translator.translate(text, dest = output_lang)
-        return translated_text
+        return translated_text.text
     except Exception as e:
         print(f"Error in translation: {e}")
         return None
