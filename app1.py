@@ -16,7 +16,7 @@ def translate(text, output_lang):
     except Exception as e:
         print(f"Error in translation: {e}")
         return None
-
+print(translate("how are you","ar"))
 #_______________________________________________________________________________________________
  
 app = Flask(__name__)
