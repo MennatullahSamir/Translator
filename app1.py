@@ -18,6 +18,9 @@ def translate(text,output_lang):
 app = Flask(__name__)
 CORS(app)  # Enable Cross-Origin Resource Sharing
 
+@app.route('/test', methods=['GET'])
+def test_endpoint():
+    return jsonify({'message': 'GET request successful'})
 
 @app.route('/voice_translate',methods=['POST'])
 def translate_voice_endpoint():
