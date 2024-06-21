@@ -4,9 +4,9 @@ from flask import Flask , request ,jsonify
 import json
 import base64
 from flask_cors import CORS
+from googletrans import Translator
 
-
-translator = google_translator()
+translator = Translator()
 
 #text to text translation
 def translate(text, output_lang):
@@ -16,7 +16,7 @@ def translate(text, output_lang):
     except Exception as e:
         print(f"Error in translation: {e}")
         return None
-print(translate("how are you","ar"))
+
 #_______________________________________________________________________________________________
  
 app = Flask(__name__)
