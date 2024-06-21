@@ -1,0 +1,25 @@
+[1mdiff --git a/app1.py b/app1.py[m
+[1mindex 8c441a5..ff271b0 100644[m
+[1m--- a/app1.py[m
+[1m+++ b/app1.py[m
+[36m@@ -6,10 +6,8 @@[m [mimport base64[m
+ from flask_cors import CORS[m
+ [m
+ [m
+[31m-[m
+ translator = google_translator()[m
+ [m
+[31m-[m
+ #text to text translation[m
+ def translate(text ,output_lang):[m
+     translated_text = translator.translate(text , lang_tgt = output_lang)[m
+[1mdiff --git a/requirements.txt b/requirements.txt[m
+[1mindex 8e97de3..4f6fef9 100644[m
+[1m--- a/requirements.txt[m
+[1m+++ b/requirements.txt[m
+[36m@@ -1,4 +1,4 @@[m
+[31m-Flask==2.0.1[m
+[32m+[m[32mFlask==3.0.3[m
+ Werkzeug==3.0.3[m
+ flask-cors==3.0.10[m
+ google_trans_new==1.1.9[m
