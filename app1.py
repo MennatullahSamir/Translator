@@ -1,4 +1,4 @@
-from google_trans_new import google_translator
+# from google_trans_new import google_translator
 import os
 from flask import Flask , request ,jsonify
 import json
@@ -11,7 +11,7 @@ translator = Translator()
 #text to text translation
 def translate(text, output_lang):
     try:
-        translated_text = translator.translate(text, lang_tgt=output_lang)
+        translated_text = translator.translate(text, dest = output_lang)
         return translated_text
     except Exception as e:
         print(f"Error in translation: {e}")
