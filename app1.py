@@ -9,9 +9,13 @@ from flask_cors import CORS
 translator = google_translator()
 
 #text to text translation
-def translate(text,output_lang):
-    translated_text = translator.translate(text,lang_tgt=output_lang)
-    return translated_text
+def translate(text, output_lang):
+    try:
+        translated_text = translator.translate(text, lang_tgt=output_lang)
+        return translated_text
+    except Exception as e:
+        print(f"Error in translation: {e}")
+        return None
 
 #_______________________________________________________________________________________________
  
@@ -39,6 +43,9 @@ def translate_voice_endpoint():
     
         #translate text to text
         translated_text = translate(recognized_text,output_language)
+        if translated_text is None:
+            return jsonify({'error': 'Translation failed'}), 500
+        
         return jsonify({'translated_text': translated_text})
     except Exception as e:
        print(f'Error: {e}')
